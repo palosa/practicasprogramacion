@@ -4,11 +4,13 @@
 
     $jugadas = new jugadorDado();
 
-    $jugadas->randomPos();
+    $jugadas->setMinNumDado(2);
 
-    for ($i=1; $i < 12 ; $i++) {
-      echo "tirada.$i<br>";
-      echo $jugadas;
+    $jugadas->setMaxNumDado(14);
+
+    for ($i=1; $i <= 12 ; $i++) {
+      echo "Tirada$i<br>";
+      echo $jugadas->randomPos()."<br>";
 
     }
 

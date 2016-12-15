@@ -2,9 +2,10 @@
     class jugadorDado
     {
 
-    private $minNumDado=0;
-    private $maxNumDado=12;
+    private $minNumDado;
+    private $maxNumDado;
     public $tirarDado=12;
+    private $tiradas=[];
 
     public function getMinNumDado(){
       return $this->minNumDado;
@@ -33,8 +34,9 @@
     //random
     public function randomPos(){
 
-       $this->tirarDado=rand(0,12);
-       
+       $tirarDado=rand($this->minNumDado,$this->maxNumDado);
+
+         return $tirarDado;
      }
 
     }
