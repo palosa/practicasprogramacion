@@ -13,6 +13,9 @@
       echo $jugadas->randomPos()."<br>";
 
     }
+    $jugadas->imprimirTiradas();
+    echo "<br>";
+    echo "<b><br>La media es :</b>".$jugadas->calcularMediaTiradas();
 
 
 

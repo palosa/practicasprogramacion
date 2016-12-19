@@ -31,11 +31,32 @@
       }
 
     }
-    //random
+    private function guardarTiradas($tiradas){
+      $this->tiradas[] = $tiradas;
+
+    }
+    public function imprimirTiradas(){
+      foreach ($this->tiradas as $key => $value) {
+        echo "<br>Tirada ".($key+1)." :".$value;
+      }
+    }
+    public function calcularMediaTiradas(){
+      $media=0;
+      $numeroTiradas=0;
+      foreach ($this->tiradas as $key => $value) {
+        $media=$media+$value;
+        $numeroTiradas++;
+      }
+      $media=$media / $numeroTiradas;
+
+      return round($media);
+    }
+
+
     public function randomPos(){
 
        $tirarDado=rand($this->minNumDado,$this->maxNumDado);
-
+       $this->guardarTiradas($tirarDado);
          return $tirarDado;
      }
 
