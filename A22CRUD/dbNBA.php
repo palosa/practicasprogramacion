@@ -32,7 +32,7 @@ class dbNBA
     if (!$this->error) {
       $update="UPDATE equipos SET nombre='".$nombre."'  ciudad='".$ciudad."'  conferencia='".$conferencia."'  division='".$division."'WHERE nombre='".$nombre."'";
       $this->conexion->query($update);
-      return $this->conexion->query("SELECT * FROM equipos WHERE nombre='".$nombre."' AND ciudad='".$ciudad."' AND conferencia='".$conferencia."' AND division='".$division."'");
+      return $this->conexion->query("SELECT * FROM equipos WHERE nombre='".$nombre."'");
     }
     else{
       return null;
