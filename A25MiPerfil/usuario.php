@@ -77,25 +77,6 @@ class Usuario extends db
         return null;
       }
     }
-    // mostrara los equipos
-    public function Equipos(){
-
-      $sql="SELECT nombre,ciudad FROM equipos";
-
-
-      $resultado=$this->realizarConsulta($sql);
-
-      if ($resultado!=null) {
-
-        $tabla=[];
-        while ($fila=$resultado->fetch_assoc()) {
-          $tabla[]=$fila;
-        }
-        return $tabla;
-      }
-      else{
-        return null;
-      }
-    }
+    
 }
  ?>
